@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     `;
  
-    //insert new comment before the old ones
+ //insert new comment before the old ones
     commentGrid.insertBefore(newComment, commentGrid.firstChild);
     commentInput.value = '';
   });
