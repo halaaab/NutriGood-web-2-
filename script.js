@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
       alert('Please enter a comment!');
       return;
     }
-
+//new comment creation
     const newComment = document.createElement('div');
     newComment.className = 'comment-card';
     
@@ -25,7 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="txt">${commentText}</div>
       </div>
     `;
-    
+ 
+    //insert new comment before the old ones
     commentGrid.insertBefore(newComment, commentGrid.firstChild);
     commentInput.value = '';
   });
