@@ -292,39 +292,28 @@ input[type="file"] {
 
 }
 
+
+
 .current-img {
     width: 200px;
     height: 110px;
-    border: 1px solid rgba(34,56,31,.35);
-    border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #fff;
+
 }
 
 .current-img img {
-    max-width: 100px;
-    max-height: 90px;
-    opacity: 0.8;
-}
-
-.current-img {
-    width: 70px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.current-img img {
-    width: 40px;
-    opacity: 0.8;
+    
+     width: 50%;      /* ← غيّرها */
+    height: 90%;     /* ← غيّرها */
+    object-fit: cover; /* ← أضف هذا - عشان الصورة تتناسب مع الإطار */
+    opacity: 0.9;
 }
 
 .current-video {
-    width: 200px;
-    height: 110px;
+    width: 60px;
+    height: 100px;
     background-color: #000;
     border-radius: 6px;
     margin-left: auto;        /* ← غيّرها من 120px إلى auto */
@@ -406,13 +395,13 @@ input[type="file"] {
     <form>
         <div class="form-group">
             <label>Name:</label>
-            <input type="text" value="Hight protein snack">
+            <input type="text" value="Banana bread">
         </div>
 
         <div class="form-group">
             <label>Category:</label>
             <select>
-                <option>Snake</option>
+                <option>Snack</option>
                 <option>Breakfast</option>
                 <option>Lunch</option>
             </select>
@@ -431,7 +420,7 @@ input[type="file"] {
     <div class="photo-preview-section">
         <strong>Current photo:</strong>
         <div class="current-img">
-            <img src="protein-chips-hummus.webp" alt="current image">
+            <img src="images/banana-bread.png" alt="current image">
         </div>
     </div>
 </div>
@@ -442,8 +431,8 @@ input[type="file"] {
 
         <div class="form-group inline-group">
             <label>Ingredient 1:</label>
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="Quantity">
+            <input type="text" placeholder="Name" value="bananas">
+            <input type="text" placeholder="Quantity" value="3">
         </div>
 
         <div class="form-group" style="margin-top:25px;">
@@ -452,12 +441,12 @@ input[type="file"] {
 
         <div class="form-group inline-group">
             <label>Step 1:</label>
-            <input type="text" style="width:380px;">
+            <input type="text" style="width:380px;" value="Heat the oven at 180°C">
         </div>
 
         <div class="form-group inline-group">
             <label>Step 2:</label>
-            <input type="text" style="width:380px;">
+            <input type="text" style="width:380px;" value="Mix the wet ingredients">
         </div>
 
 
@@ -535,4 +524,3 @@ input[type="file"] {
 </html>
 </body>
 </html>
-
