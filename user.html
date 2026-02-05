@@ -380,7 +380,17 @@
             border-radius: 10px; /* زوايا خفيفة */
         }
 
+        .heart-icon-img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
 
+        .filter-icon-img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
 
     </style>
 </head>
@@ -450,9 +460,7 @@
                     <!-- زر الفلتر الأصلي + الأيقونة -->
                     <button class="filter-btn">
                         Filter
-                        <svg viewBox="0 0 24 24">
-                            <path d="M3 4h18l-7 8v6l-4 2V12L3 4z" />
-                        </svg>
+                        <img src="images/filter.png" class="filter-icon-img" alt="filter">
                     </button>
 
                 </div>
@@ -504,7 +512,7 @@
 
             <!-- My Favorite Recipes -->
             <div class="fav-title">
-                My favorite recipes <span class="heart-icon">♥</span>
+                My favorite recipes <img src="images/heart.png" class="heart-icon-img" alt="favorite">
             </div>
 
             <div class="table-wrap" style="max-width:520px;">
