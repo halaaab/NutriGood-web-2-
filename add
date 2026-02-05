@@ -38,8 +38,11 @@ body {
 
 /* ====== Title ====== */
 h2 {
-    color: #3b4a2f;
+    color: #22381F;
     margin-bottom: 30px;
+    font-size: 40px;                    /* ← جديد */
+    font-family: 'Cooper BT', Georgia, serif;  /* ← جديد */
+    font-weight: 400;                   /* ← جديد */
 }
 
 /* ====== Form ====== */
@@ -49,73 +52,115 @@ h2 {
 
 label {
     display: inline-block;
-    width: 120px;
+    width: 200px;                       /* ← عرض أكبر عشان يستوعب كل النصوص الطويلة */
     vertical-align: top;
+    font-size: 18px;
+    font-family: 'Cooper BT', Georgia, serif;
+    font-weight: 600;
 }
 
 input[type="text"],
 textarea,
 select {
-    width: 300px;
-    padding: 6px;
-    border: 1px solid #b7b7b7;
-    background-color: #fffdf6;
+    width: 320px;                       /* ← عرض أكبر */
+    padding: 10px 12px;                 /* ← حشوة أكبر */
+    border: 1px solid rgba(34,56,31,.35);  /* ← لون جديد */
+    background-color: #fff;             /* ← لون جديد */
+    font-size: 16px;                    /* ← جديد */
+    font-family: 'Cooper BT', Georgia, serif;  /* ← جديد */
+    border-radius: 8px;                 /* ← جديد (حواف دائرية) */
 }
 
 textarea {
-    height: 90px;
+    height: 100px;
     resize: none;
 }
 
 input[type="file"] {
     border: none;
+    font-size: 16px;                    /* ← جديد */
+    font-family: 'Cooper BT', Georgia, serif;  /* ← جديد */
 }
 
+/* ====== Ingredients & Steps ====== */
 /* ====== Ingredients & Steps ====== */
 .inline-group {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
+    margin-left: 160px;  /* ← جديد - يحركه يمين */
+}
+
+.inline-group label {
+    width: auto;         /* ← جديد - عرض تلقائي */
+    margin-right: 15px;  /* ← جديد - مسافة بعد اللايبل */
 }
 
 .inline-group input {
-    width: 180px;
+    width: 200px;
+    font-size: 16px;
 }
 
+
 .add-btn {
-    padding: 2px 8px;
-    border: 1px solid #888;
-    background-color: #f2f2e9;
+    padding: 6px 14px;                  /* ← حشوة أكبر */
+    border: 1px solid rgba(34,56,31,.55);  /* ← لون جديد */
+    background-color: #22381F;          /* ← لون أخضر داكن */
+    color: #FFFFFA;                     /* ← نص فاتح */
     cursor: pointer;
+    font-size: 16px;                    /* ← جديد */
+    border-radius: 6px;                 /* ← جديد */
+    font-family: 'Cooper BT', Georgia, serif;  /* ← جديد */
+    transition: all 0.2s ease;          /* ← جديد (حركة سلسة) */
 }
+
+.add-btn:hover {                        /* ← تأثير جديد */
+    background-color: #245230;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
 
 /* ====== Image Placeholder ====== */
 .image-box {
-    width: 300px;
-    height: 160px;
-    border: 1px dashed #aaa;
+    width: 320px;                       /* ← عرض أكبر */
+    height: 180px;                      /* ← ارتفاع أكبر */
+    border: 1px dashed rgba(34,56,31,.35);  /* ← لون جديد */
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 120px;
+    margin-left: 140px;                 /* ← هامش أكبر */
     color: #777;
-    font-size: 14px;
+    font-size: 16px;                    /* ← حجم أكبر */
+    font-family: 'Cooper BT', Georgia, serif;  /* ← جديد */
 }
 
-/* ====== Submit Button ====== */
+
+
 .submit-wrapper {
-    margin-top: 30px;
+    margin-bottom: 39px;                   /* ← نقصناه 5px عشان يرفع الزر */
     text-align: center;
 }
 
 .submit-btn {
-    padding: 8px 22px;
-    border-radius: 20px;
-    border: 1px solid #3b4a2f;
-    background-color: #fff;
-    color: #3b4a2f;
-    font-size: 16px;
+    padding: 12px 30px;                 /* ← حشوة أكبر */
+    border-radius: 25px;                /* ← حواف أكثر دائرية */
+    border: 2px solid #22381F;          /* ← لون وسماكة جديدة */
+    background-color: #22381F;          /* ← خلفية داكنة */
+    color: #FFFFFA;                     /* ← نص فاتح */
+    font-size: 18px;                    /* ← حجم أكبر */
     cursor: pointer;
+    font-family: 'Cooper BT', Georgia, serif;  /* ← جديد */
+    font-weight: 600;                   /* ← جديد */
+    transition: all 0.3s ease;          /* ← جديد */
+}
+
+.submit-btn:hover {                     /* ← تأثير جديد */
+    background-color: #245230;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* ====== Footer ====== */
@@ -136,19 +181,105 @@ input[type="file"] {
     margin: 6px 0;
     font-size: 14px;
 }
+.topbar, .topbar-admin{
+    background: var(--cream);
+    border-bottom: 1px solid var(--soft-border);
+}
+
+.topbar-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap: 18px;
+    padding: 14px 0;
+}
+
+.recipe-brand{
+    display:flex;
+    align-items:center;
+}
+
+.recipe-brand img{
+    height: 64px;
+    width: auto;
+}
+
+.nav{
+    display:flex;
+    justify-content:center;
+    gap: 44px;
+    font-size: 18px;
+}
+
+.nav a{
+    text-decoration:none;
+    padding: 6px 14px;
+    border-radius: 999px;
+    transition: background .2s ease, transform .15s ease;
+}
+
+.nav a:hover{
+    background: rgba(229,255,223,.7);
+}
+
+.nav a.active{
+    font-weight: 700;
+}
+
+.actions-right, .admin-btns{
+    display:flex;
+    font-weight: 600;
+    gap: 10px;
+    align-items:center;
+}
+
+.pill{
+    border: 2px solid var(--primary-green);
+    background: var(--primary-green);
+    color: var(--white);
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 1rem;
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    font-weight: 600;
+    font-family: 'Cooper BT', Georgia, serif;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.pill:hover {
+    background-color: #245230;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pill:active{
+    transform: scale(.98);
+}
+
 </style>
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-   <header class="topbar-admin">
-    <div class="containers">
-      <div class="topbar-inner">
-     <div class="logo-section">
+    <!-- HEADER -->
+    <header class="topbar-admin">
+        <div class="containers">
+            <div class="topbar-inner">
+                <div class="logo-section">
                     <img src="images/nutrigood-logo.png" alt="NutriGood Logo" class="logo">
-                
-    </div>
-  </header>
+
+                </div>
+
+            </div>
+        </div>
+    </header>
 
 
 <!-- Main -->
@@ -187,6 +318,9 @@ input[type="file"] {
             <label>Ingredients:</label>
         </div>
 
+
+
+        
         <div class="form-group inline-group">
             <label>Ingredient 1:</label>
             <input type="text" placeholder="Name">
@@ -220,9 +354,18 @@ input[type="file"] {
     </form>
 </div>
 
- <!-- Footer Section -->
+
+
+  <!-- Brand Banner Section -->
+    <section class="brand-banner">
+        <div class="banner-content">
+        </div>
+    </section>
+
+    
+    <!-- Footer Section -->
     <footer class="footer">
-        <div class="containers">
+        <div class="container">
             <div class="footer-content">
                 <div class="footer-divider"></div>
                 <p class="footer-copyright">&copy; 2026 NutriGood</p>
