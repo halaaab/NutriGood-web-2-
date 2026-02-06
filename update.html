@@ -462,7 +462,7 @@ input[type="file"] {
 
     <div class="form-group inline-group">
         <label>Step 3:</label>
-        <input type="text" name="instructionStep[]" style="width:380px;" value="Combine wet and dry ingredients">
+        <input type="text" name="instructionStep[]" style="width:380px;" value="Add the dry ingredients">
         <button type="button" class="remove-btn" onclick="removeElement(this)">-</button>
     </div>
 
@@ -725,8 +725,9 @@ function addIngredient() {
         return;
     }
     
+    // إذا كل شيء تمام
     alert('Recipe updated successfully!');
-    window.location.href = 'my-recipes.html';
+    window.location.href = 'Myrecipes.html';
 });
 
 
