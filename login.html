@@ -55,11 +55,13 @@
                     <a href="#" class="forgot-password">Forgot password?</a>
                 </div>
 
-                <!-- Log In Button (Regular User) -->
-                <button type="button" class="auth-submit-btn" onclick="loginAsUser()">Log In</button>
+                <button type="submit" class="auth-submit-btn" formaction="user.html">
+                   Log In
+                </button>
 
-                <!-- Log In as Admin Button -->
-                <button type="button" class="auth-submit-btn auth-submit-btn--secondary" onclick="loginAsAdmin()">Log In as Admin</button>
+                <button type="submit" class="auth-submit-btn auth-submit-btn--secondary" formaction="admin.html">
+                  Log In as Admin
+                </button>
 
             </form>
 
@@ -110,24 +112,7 @@
     </footer>
 
     <script>
-        function loginAsUser() {
-            var form = document.getElementById('loginForm');
-            if (form.checkValidity()) {
-                window.location.href = 'user.html';
-            } else {
-                form.reportValidity();
-            }
-        }
-
-        function loginAsAdmin() {
-            var form = document.getElementById('loginForm');
-            if (form.checkValidity()) {
-                window.location.href = 'admin.html';
-            } else {
-                form.reportValidity();
-            }
-        }
-
+        
         function togglePassword(inputId, btn) {
             var input = document.getElementById(inputId);
             if (input.type === 'password') {
